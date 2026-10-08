@@ -3,7 +3,7 @@
 The public site for [Scaeno](https://apps.apple.com/app/id6796313306), a movie and TV guessing game: see three
 stills from the same title, name it before the clock runs out.
 
-**Live:** https://hakanarda.github.io/scaeno-landing/
+**Live:** https://scaeno.trust-software.com/
 
 A single static page: `index.html` (markup, styles and script in one file), the Tuffy font in `fonts/`, and
 Fugaz One and Space Mono from Google Fonts. There is no build step.
@@ -28,8 +28,11 @@ published, and that the App Store link is correct.
 
 ## Deploy
 
-GitHub Pages serves the `main` branch from the repository root. Push to `main` and the site updates within a minute
-or two.
+Cloudflare Pages serves the `main` branch from the repository root (no build step) at scaeno.trust-software.com. Push
+to `main` and the site updates within a minute or two.
+
+GitHub Pages still serves the same files at the old address, hakanarda.github.io/scaeno-landing; the canonical tag
+points search engines here.
 
 ## Keeping the page current (strict rule)
 
