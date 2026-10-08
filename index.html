@@ -186,6 +186,16 @@ button { font: inherit; color: inherit; }
 .hints { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .hints span { font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--tape-hi); color: var(--pink-hi); }
 .fine { margin-top: 28px; color: var(--dim); }
+.arcade { margin-top: clamp(40px, 6vw, 72px); }
+.arcade h3 { margin: 0 0 10px; font-size: clamp(24px, 3vw, 34px); line-height: 1.1; }
+.arcade-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.arcade-list li { display: grid; gap: 6px; padding: 18px 18px 20px; border-radius: 10px; background: var(--tape); border-left: 4px solid var(--c); }
+.arcade-list b { font-size: 22px; }
+.arcade-list span { color: var(--dim); }
+.arcade-list .a-blitz { --c: #FF5CA8; }
+.arcade-list .a-survival { --c: #9D6BFF; }
+.arcade-list .a-endless { --c: #FFD54A; }
+@media (max-width: 700px) { .arcade-list { grid-template-columns: 1fr; } }
 @media (max-width: 900px) { .boxes { grid-template-columns: 1fr; } }
 @media (max-width: 460px) { .box { grid-template-columns: 1fr; } .box .cover { min-height: 170px; } }
 
@@ -411,13 +421,22 @@ footer nav a:hover { color: var(--ink); }
         </article>
       </div>
       <p class="fine">Either way, a right answer scores more the faster you give it. Ten rounds make a game.</p>
+      <div class="arcade">
+        <h3 id="arcade-h">Then try to beat yourself.</h3>
+        <p class="lede">Three open-ended modes for members. Four answers every time, no fixed number of rounds, and one number to beat: your own best.</p>
+        <ul class="arcade-list" aria-labelledby="arcade-h">
+          <li class="a-blitz"><b>Blitz</b><span>Every right answer in 60 seconds counts.</span></li>
+          <li class="a-survival"><b>Survival</b><span>Three misses and the run is over.</span></li>
+          <li class="a-endless"><b>Endless</b><span>One miss ends it.</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section flush" id="shelves" aria-labelledby="shelves-h">
     <div class="wrap"><div class="head">
       <h2 class="h2" id="shelves-h">Take anything off the shelf.</h2>
-      <p class="lede">Play movies, series, or both. Choose a genre, a decade, or a curated list like IMDB Top 250 or Emmy Winners.</p>
+      <p class="lede">Play movies, series, or both. Choose a genre, a decade, or a curated list like IMDB Top 250 or Emmy Winners. Blitz, Survival and Endless run on all movies, all series, both together, or any single genre.</p>
     </div></div>
     <div class="rack"><div class="rack-scroll" id="rack" tabindex="0" aria-label="Categories, scroll sideways">
         <div class="divider"><b>Movie genres</b></div>
@@ -561,7 +580,7 @@ footer nav a:hover { color: var(--ink); }
           </div>
           <div class="perks">
             <div><h3>Guest pass</h3><ul><li>5 free games a day</li><li>Easy mode</li><li>Play the Daily Challenge</li></ul></div>
-            <div><h3>Free member</h3><ul><li>Unlimited games and Hard mode</li><li>Every shelf and challenge</li><li>Leaderboards, trophies and titles</li><li>Your guest progress comes with you</li></ul></div>
+            <div><h3>Free member</h3><ul><li>Unlimited games and Hard mode</li><li>Every shelf and challenge</li><li>Blitz, Survival and Endless</li><li>Leaderboards, trophies and titles</li><li>Your guest progress comes with you</li></ul></div>
           </div>
         </div>
       </div>

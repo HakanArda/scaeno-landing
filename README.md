@@ -43,8 +43,8 @@ applies to Claude, Codex and people alike.
 | Section (`id`) | What it shows | Source of truth in the app repo |
 |---|---|---|
 | `#top` | Hero and demo round: three stills, four answers, 10-second clock | `src/components/BackdropStack.tsx`, `strings.modeEasyDesc` |
-| `#modes` | Easy and Hard rules, hints, rounds per game | `strings.modeEasyDesc` / `modeHardDesc`, `strings.hintLabels`, `supabase/functions/_shared/config.ts` |
-| `#shelves` | Categories: genres, decades, curated lists, mixed | the live `collections` table (`is_active = true`) |
+| `#modes` | Easy and Hard rules, hints, rounds per game; Blitz, Survival and Endless rules | `strings.modeEasyDesc` / `modeHardDesc`, `strings.hintLabels`, `strings.arcadeModes`, `supabase/functions/_shared/config.ts` |
+| `#shelves` | Categories: genres, decades, curated lists, mixed; which of them the arcade modes use | the live `collections` table (`is_active = true`), `isAllowedArcadePool` in `supabase/functions/_shared/arcade.ts` |
 | `#daily` | Daily Challenge: 15 questions, weekday themes, streaks, freezes, ranking | `supabase/functions/_shared/daily-config.ts`, `strings.daily*` |
 | `#challenges` | 1v1 and group challenges, invite codes and usernames, results | `app/challenges/*`, `strings.challenges*` |
 | `#club` | Membership, leaderboards, achievement tiers and titles, guest limits | achievements seed migration, `theme.tiers`, `strings.membership*`, `session-start` guest limit |
