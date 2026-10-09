@@ -28,8 +28,15 @@ published, and that the App Store link is correct.
 
 ## Deploy
 
-Cloudflare Pages serves the `main` branch from the repository root (no build step) at scaeno.trust-software.com. Push
-to `main` and the site updates within a minute or two.
+The site is the `scaeno-landing` Cloudflare Worker (static assets, no build step), served at
+scaeno.trust-software.com. `wrangler.jsonc` describes it, and `.assetsignore` lists the repo files that are not
+published.
+
+- **Automatic:** `.github/workflows/deploy.yml` deploys every time a pull request is merged into `main`. It needs the
+  `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repository secrets.
+- **On demand, through GitHub:** `gh workflow run deploy.yml` deploys the current `main`.
+- **On demand, from your machine:** `npm run deploy` runs the check and deploys the working tree. Run
+  `npx wrangler login` once first.
 
 GitHub Pages still serves the same files at the old address, hakanarda.github.io/scaeno-landing; the canonical tag
 points search engines here.
