@@ -1,0 +1,13 @@
+# Files in the repo that are not part of the published site.
+.git
+.github
+.gitignore
+.assetsignore
+.nojekyll
+.wrangler
+node_modules
+README.md
+check.mjs
+package.json
+package-lock.json
+wrangler.jsonc

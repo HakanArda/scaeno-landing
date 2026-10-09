@@ -1,0 +1,8 @@
+{
+  "name": "scaeno-landing",
+  "private": true,
+  "scripts": {
+    "check": "node check.mjs",
+    "deploy": "node check.mjs && npx --yes wrangler@4 deploy"
+  }
+}

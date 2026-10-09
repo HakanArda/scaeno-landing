@@ -1,0 +1,17 @@
+{
+  // The site is the `scaeno-landing` Worker (static assets only, no script).
+  // `npm run deploy` and the GitHub Actions workflow both deploy with this file.
+  "name": "scaeno-landing",
+  "compatibility_date": "2026-10-06",
+  "observability": {
+    "enabled": true
+  },
+  "workers_dev": true,
+  "preview_urls": true,
+  "routes": [
+    { "pattern": "scaeno.trust-software.com", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "."
+  }
+}
