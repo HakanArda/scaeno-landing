@@ -52,9 +52,9 @@ applies to Claude, Codex and people alike.
 | `#top` | Hero and demo round: three stills, four answers, 10-second clock | `src/components/BackdropStack.tsx`, `strings.modeEasyDesc` |
 | `#modes` | Easy and Hard rules, hints, rounds per game; Blitz, Survival and Endless rules and their trophies; Scratch Cut rules | `strings.modeEasyDesc` / `modeHardDesc`, `strings.hintLabels`, `strings.arcadeModes`, the arcade achievements migration, `supabase/functions/_shared/config.ts`; `strings.scratch*`, `supabase/functions/_shared/scratch.ts`, the Scratch Cut migration |
 | `#shelves` | Categories: genres, decades, curated lists, mixed; which of them the arcade modes and Scratch Cut use | the live `collections` table (`is_active = true`), `isAllowedArcadePool` in `supabase/functions/_shared/arcade.ts`, `supabase/functions/scratch-start/index.ts` |
-| `#daily` | Daily Challenge: 15 questions, weekday themes, streaks, freezes, ranking | `supabase/functions/_shared/daily-config.ts`, `strings.daily*` |
+| `#daily` | Daily Challenge: 15 questions, weekday themes, streaks, freezes, ranking; EmojiScope (`#emojiscope`): daily emoji puzzle, reveals, paused clock, members-only streak and past puzzles | `supabase/functions/_shared/daily-config.ts`, `strings.daily*`; `strings.emoji*`, the EmojiScope play migration (`reconcile_emoji_streak`), `supabase/functions/emoji-archive/index.ts` |
 | `#challenges` | 1v1 and group challenges, invite codes and usernames, results | `app/challenges/*`, `strings.challenges*` |
-| `#club` | Membership, leaderboards, achievement tiers and titles, guest limits, members-only modes | achievements seed migration, `theme.tiers`, `strings.membership*`, `session-start` guest limit, `scratch-start` guest check |
+| `#club` | Membership, leaderboards, achievement tiers and titles, guest limits, members-only modes | achievements seed migration, `theme.tiers`, `strings.membership*`, `session-start` guest limit, `scratch-start` guest check, `emoji-archive` members check |
 | `#download` | Store badges and availability | App Store id6796313306; Google Play not live yet |
 
 The footer's legal links follow `src/lib/legal.ts`, and its TMDB line follows `strings.aboutAttribution`.
